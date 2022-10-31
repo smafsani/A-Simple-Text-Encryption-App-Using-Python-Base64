@@ -30,7 +30,8 @@ def encryptText():
         screen.geometry("%dx%d+%d+%d" % (width, height, x, y))
         screen.configure(bg="#DF0A27")
         screen.iconphoto(False, icon)
-
+        
+        # Encrypting Text
         message = text.get(1.0, END)
         encoded_text = message.encode("ascii")
         base64_bytes = base64.b64encode(encoded_text)
@@ -56,7 +57,8 @@ def decryptText():
         screen.geometry("%dx%d+%d+%d" % (width, height, x, y))
         screen.configure(bg="#10C42B")
         screen.iconphoto(False, icon)
-
+        
+        # Decrypting Text
         message = text2.get(1.0, END)
         decoded_text = message.encode("ascii")
         base64_bytes = base64.b64decode(decoded_text)
